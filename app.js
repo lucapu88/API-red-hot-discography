@@ -1,7 +1,7 @@
 const PORT = process.env.PORT || 3000;
 const express = require('express');
 const app = express();
-
+//comando da dare al terminale per renderla utile: npm start
 app.get('/RedHotCHiliPeppersDiscography', (req, res) => {
  res.json([
    {
