@@ -3,7 +3,9 @@ const express = require('express');
 const app = express();
 //comando da dare al terminale per renderla utile: npm start
 app.get('/RedHotCHiliPeppersDiscography', (req, res) => {
- res.json([
+  res.json({
+    "success": true,
+    "response":[
    {
      poster: "https://m.media-amazon.com/images/I/91SCqfYUIbL._SS500_.jpg",
      album: "the red hot chili peppers",
@@ -90,9 +92,9 @@ app.get('/RedHotCHiliPeppersDiscography', (req, res) => {
      descrizione:
        " l'album è stato prodotto per la prima volta dopo 20 anni di collaborazione (iniziata con Blood Sugar Sex Magik nel 1991) non da Rick Rubin ma da Danger Mouse e missato da Nigel Godrich. Si tratta inoltre del secondo ed ultimo album in studio inciso con il chitarrista Josh Klinghoffer, sostituto dello storico John Frusciante, che nel 2019 verrà rimpiazzato proprio da quest'ultimo.",
    },
- ]);
+ ]});
 });
 app.listen(PORT, () => {
-console.log('porta in ascolto');
+console.log('porta in ascolto', PORT);
 
 });
